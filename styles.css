@@ -5,14 +5,14 @@ body {
     text-align: center;
     font-family: 'Luckiest Guy', cursive;
     background-color: #ffe6f2; /* Light pink background */
-    color: #ff4081; /* Cute pink text */
+    color: #e45d5d; /* Cute pink text */
 }
 
 /* Make the title much bigger and centered */
 h1 {
-    font-size: 60px; /* Super big title */
+    font-size: 70px; /* Super big title */
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     text-shadow: 3px 3px 5px rgba(215, 46, 46, 0.2); /* Slight shadow for depth */
 }
 
@@ -25,7 +25,7 @@ p {
 button {
     font-size: 24px;
     padding: 15px 30px;
-    background-color: #ff4081; /* Pink button */
+    background-color: #e45d5d; /* Pink button */
     color: white;
     border: none;
     border-radius: 15px;

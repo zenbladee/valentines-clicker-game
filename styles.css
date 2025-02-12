@@ -1,0 +1,41 @@
+/* Import Google Font for Bubble Effect */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #ffe6f2; /* Light pink background */
+    color: #ff4081; /* Cute pink text */
+}
+
+/* Make the title much bigger and centered */
+h1 {
+    font-size: 60px; /* Super big title */
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Bigger text for the paragraph */
+p {
+    font-size: 24px;
+}
+
+/* Style the button to match the theme */
+button {
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: #ff4081; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #ff79a8;
+    transform: scale(1.1);
+}

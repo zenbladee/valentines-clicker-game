@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4cccc;
+    background-color: #f4cccc; /* Soft pink background */
 }
 
 /* Game Container */
@@ -16,34 +16,38 @@ body {
     padding: 20px;
 }
 
+/* The game area where the player and piggy will be */
 .game-area {
     position: relative;
     width: 100%;
     height: 400px;
-    background-color: #71c95f;
+    background-color: #a9daa0ed; /* Light green background for the game area */
     margin-top: 20px;
-    border: 2px solid #ccc;
+    border: 5px solid #a9daa067; /* Light border with some opacity */
 }
 
+/* Player style */
 .player {
-    height: 30px;
-    background-color: #4e74ce;
+    width: 30px; /* Size of the player */
+    height: 30px; /* Height of the player */
+    background-color: #4e74ce; /* Blue color for the player */
     position: absolute;
-    border-radius: 50%;
+    border-radius: 50%; /* Circle shape */
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* Smooth movement */
 }
 
-.clickable-piggy {
-    width: 50px;
-    height: 50px;
-    background-color: #d97fbe;
+/* Piggy style */
+.piggy {
+    width: 50px; /* Size of the piggy */
+    height: 50px; /* Height of the piggy */
+    background-color: #edadda; /* Pink color for the piggy */
     position: absolute;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s;
+    border-radius: 50%; /* Circle shape */
+    transition: transform 0.2s; /* Smooth movement */
 }
 
-.clickable-piggy:hover {
-    transform: scale(1.2);
+/* Optional animation: Slight zoom when hovering over piggy */
+.piggy:hover {
+    transform: scale(1.2); /* Slightly bigger piggy when hovered */
 }

@@ -1,57 +1,48 @@
-let score = 0;
-let player = document.getElementById("player");
-let piggy = document.getElementById("piggy");
-let scoreDisplay = document.getElementById("score");
-let gameArea = document.getElementById("gameArea");
+const player = document.querySelector('.player');
+const piggy = document.querySelector('.piggy');
+let playerPosition = { x: 0, y: 0 };
 
-// Player initial position
-let playerX = 50;
-let playerY = 50;
+// Set up grid size
+const gridSize = 50; // Change this to make the grid more or less fine
+const gameArea = document.querySelector('.game-area');
 
-// Set initial position of the player
-function setPlayerPosition() {
-    player.style.left = `${playerX}%`;
-    player.style.top = `${playerY}%`;
-}
+// Move the player based on arrow keys, but make it follow the grid
+document.addEventListener('keydown', (e) => {
+    const gameAreaWidth = gameArea.offsetWidth;
+    const gameAreaHeight = gameArea.offsetHeight;
 
-// Set initial position of the piggy
-function setPiggyPosition() {
-    let piggyX = Math.random() * 90; // Random X position for the piggy
-    let piggyY = Math.random() * 90; // Random Y position for the piggy
-    piggy.style.left = `${piggyX}%`;
-    piggy.style.top = `${piggyY}%`;
-}
-
-// Function to check collision between player and piggy
-function checkCollision() {
-    const playerRect = player.getBoundingClientRect();
-    const piggyRect = piggy.getBoundingClientRect();
-
-    if (playerRect.top < piggyRect.bottom &&
-        playerRect.bottom > piggyRect.top &&
-        playerRect.left < piggyRect.right &&
-        playerRect.right > piggyRect.left) {
-        score++; // Increase score if they collide
-        scoreDisplay.innerText = score;
-        setPiggyPosition(); // Move the piggy after a successful catch
+    // Moving up (y decreases)
+    if (e.key === 'ArrowUp' && playerPosition.y > 0) {
+        playerPosition.y -= gridSize;
     }
-}
-
-// Move the player with arrow keys
-document.addEventListener("keydown", function (event) {
-    if (event.key === "ArrowUp" && playerY > 0) {
-        playerY -= 1;
-    } else if (event.key === "ArrowDown" && playerY < 90) {
-        playerY += 1;
-    } else if (event.key === "ArrowLeft" && playerX > 0) {
-        playerX -= 1;
-    } else if (event.key === "ArrowRight" && playerX < 90) {
-        playerX += 1;
+    // Moving down (y increases)
+    if (e.key === 'ArrowDown' && playerPosition.y < gameAreaHeight - gridSize) {
+        playerPosition.y += gridSize;
     }
-    setPlayerPosition(); // Update player’s position on the game area
-    checkCollision(); // Check if the player catches the piggy
+    // Moving left (x decreases)
+    if (e.key === 'ArrowLeft' && playerPosition.x > 0) {
+        playerPosition.x -= gridSize;
+    }
+    // Moving right (x increases)
+    if (e.key === 'ArrowRight' && playerPosition.x < gameAreaWidth - gridSize) {
+        playerPosition.x += gridSize;
+    }
+
+    player.style.left = `${playerPosition.x}px`;
+    player.style.top = `${playerPosition.y}px`;
 });
 
-// Set initial positions for the player and the piggy
-setPlayerPosition();
-setPiggyPosition();
+// Move the piggy randomly within the grid
+function movePiggy() {
+    const gameAreaWidth = gameArea.offsetWidth;
+    const gameAreaHeight = gameArea.offsetHeight;
+
+    const randomX = Math.floor(Math.random() * (gameAreaWidth / gridSize)) * gridSize;
+    const randomY = Math.floor(Math.random() * (gameAreaHeight / gridSize)) * gridSize;
+
+    piggy.style.left = `${randomX}px`;
+    piggy.style.top = `${randomY}px`;
+}
+
+// Call the movePiggy function every 2 seconds
+setInterval(movePiggy, 2000);

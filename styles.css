@@ -55,7 +55,7 @@ body {
     background-color: #eabcdc; /* Pink color for the piggy */
     position: absolute;
     border-radius: 50%; /* Circle shape */
-    transition: transform 0.01; /* Smooth movement */
+    transition: transform 0.01s ease-in-out; /* Smooth movement */
 }
 
 /* Optional animation: Slight zoom when hovering over piggy */

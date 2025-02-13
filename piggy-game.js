@@ -14,6 +14,7 @@ function createGrid() {
     // Create the grid cells
     for (let i = 0; i < rows * columns; i++) {
         const gridCell = document.createElement('div');
+        gridCell.classList.add('grid-cell');
         gameArea.appendChild(gridCell);
     }
 }

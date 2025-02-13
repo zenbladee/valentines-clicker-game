@@ -26,15 +26,18 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, 50px);
     grid-template-rows: repeat(auto-fill, 50px);
+    gap: 0;
 }
 
-/* Create a checkerboard pattern */
+/* Grid Cells for visual layout */
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    background-color: #f1c7e4; /* Light pink for even squares */
+}
+
 .game-area div:nth-child(odd) {
     background-color: #c4ebbded; /* Light green for odd squares */
-}
-
-.game-area div:nth-child(even) {
-    background-color: #f1c7e4; /* Light pink for even squares */
 }
 
 /* Player style */

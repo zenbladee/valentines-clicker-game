@@ -8,29 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f8f8f8;
+    background-color: #f4cccc;
 }
 
-/* Front page */
-.main-container {
-    padding: 20px;
-}
-
-.game-options a {
-    display: block;
-    margin: 10px;
-    padding: 10px;
-    background-color: #f44336;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.game-options a:hover {
-    background-color: #d32f2f;
-}
-
-/* Chase the Piggy Game Styling */
+/* Game Container */
 .game-container {
     padding: 20px;
 }
@@ -39,15 +20,24 @@ body {
     position: relative;
     width: 100%;
     height: 400px;
-    background-color: #e3e3e3;
+    background-color: #71c95f;
     margin-top: 20px;
     border: 2px solid #ccc;
+}
+
+.player {
+    height: 30px;
+    background-color: #4e74ce;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .clickable-piggy {
     width: 50px;
     height: 50px;
-    background-color: #ff4081;
+    background-color: #d97fbe;
     position: absolute;
     border-radius: 50%;
     cursor: pointer;

@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,60 +8,63 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #ffd8d8; /* Soft pink background */
+    background-color: #ffd8d8; /* Soft pink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Game Container */
-.game-container {
-    padding: 20px;
+/* Main Menu */
+.menu-container {
+    text-align: center;
 }
 
-/* The game area where the player and piggy will be */
-.game-area {
-    position: relative;
-    width: 100%;
-    height: 400px;
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.game-selection {
     margin-top: 20px;
-    border: 5px solid #a9daa067; /* Light border with some opacity */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 50px);
-    grid-template-rows: repeat(auto-fill, 50px);
-    gap: 0;
 }
 
-/* Grid Cells for visual layout */
-.grid-cell {
-    width: 50px;
-    height: 50px;
-    background-color: #f1c7e4; /* Light pink for even squares */
+.game-option {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: #4e74ce; /* Blue button */
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.game-area div:nth-child(odd) {
-    background-color: #c4ebbded; /* Light green for odd squares */
+.game-option:hover {
+    background-color: #3458a6;
 }
 
-/* Player style */
-.player {
-    width: 30px; /* Size of the player */
-    height: 30px; /* Height of the player */
-    background-color: #4e74ce; /* Blue color for the player */
-    position: absolute;
-    border-radius: 50%; /* Circle shape */
+/* Clicker Game */
+.game-container {
+    text-align: center;
+}
+
+.score-display {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+#clicker-button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #eabcdc; /* Pink button */
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.1s ease-in-out; /* Faster transition for movement */
+    transition: 0.2s;
 }
 
-/* Piggy style */
-.piggy {
-    width: 50px; /* Size of the piggy */
-    height: 50px; /* Height of the piggy */
-    background-color: #eabcdc; /* Pink color for the piggy */
-    position: absolute;
-    border-radius: 50%; /* Circle shape */
-    transition: transform 0.01s ease-in-out; /* Smooth movement */
-}
-
-/* Optional animation: Slight zoom when hovering over piggy */
-.piggy:hover {
-    transform: scale(1.2); /* Slightly bigger piggy when hovered */
+#clicker-button:hover {
+    background-color: #d997b5;
 }

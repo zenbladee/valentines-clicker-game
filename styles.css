@@ -1,41 +1,59 @@
-/* Import Google Font for Bubble Effect */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
+    font-family: Arial, sans-serif;
     text-align: center;
-    font-family: 'Luckiest Guy', cursive;
-    background-color: #ffe6f2; /* Light pink background */
-    color: #e45d5d; /* Cute pink text */
+    background-color: #f8f8f8;
 }
 
-/* Make the title much bigger and centered */
-h1 {
-    font-size: 70px; /* Super big title */
-    text-align: center;
-    margin-top: 30px;
-    text-shadow: 3px 3px 5px rgba(215, 46, 46, 0.2); /* Slight shadow for depth */
+/* Front page */
+.main-container {
+    padding: 20px;
 }
 
-/* Bigger text for the paragraph */
-p {
-    font-size: 24px;
-}
-
-/* Style the button to match the theme */
-button {
-    font-size: 24px;
-    padding: 15px 30px;
-    background-color: #e45d5d; /* Pink button */
+.game-options a {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f44336;
     color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-/* Button hover effect */
-button:hover {
-    background-color: #ff79a8;
-    transform: scale(1.1);
+.game-options a:hover {
+    background-color: #d32f2f;
+}
+
+/* Chase the Piggy Game Styling */
+.game-container {
+    padding: 20px;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #e3e3e3;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+}
+
+.clickable-piggy {
+    width: 50px;
+    height: 50px;
+    background-color: #ff4081;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.clickable-piggy:hover {
+    transform: scale(1.2);
 }

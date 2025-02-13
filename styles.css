@@ -1,4 +1,4 @@
-* Basic reset */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4cccc; /* Soft pink background */
+    background-color: #ffd8d8; /* Soft pink background */
 }
 
 /* Game Container */
@@ -21,12 +21,20 @@ body {
     position: relative;
     width: 100%;
     height: 400px;
-    background-color: #a9daa0ed; /* Light green background for the game area */
     margin-top: 20px;
     border: 5px solid #a9daa067; /* Light border with some opacity */
     display: grid;
     grid-template-columns: repeat(auto-fill, 50px);
     grid-template-rows: repeat(auto-fill, 50px);
+}
+
+/* Create a checkerboard pattern */
+.game-area div:nth-child(odd) {
+    background-color: #c4ebbded; /* Light green for odd squares */
+}
+
+.game-area div:nth-child(even) {
+    background-color: #f1c7e4; /* Light pink for even squares */
 }
 
 /* Player style */
@@ -44,10 +52,10 @@ body {
 .piggy {
     width: 50px; /* Size of the piggy */
     height: 50px; /* Height of the piggy */
-    background-color: #d97fbe; /* Pink color for the piggy */
+    background-color: #eabcdc; /* Pink color for the piggy */
     position: absolute;
     border-radius: 50%; /* Circle shape */
-    transition: transform 0.2s; /* Smooth movement */
+    transition: transform 0.01; /* Smooth movement */
 }
 
 /* Optional animation: Slight zoom when hovering over piggy */

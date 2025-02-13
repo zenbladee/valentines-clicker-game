@@ -8,11 +8,12 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #ffd8d8; /* Soft pink */
+    background-color: #d8f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 /* Main Menu */
@@ -21,8 +22,8 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
-    color: #333;
+    font-size: 4rem;
+    color: #ffffff;
 }
 
 .game-selection {
@@ -34,7 +35,7 @@ h1 {
     padding: 15px 30px;
     font-size: 1.5rem;
     text-decoration: none;
-    background-color: #4e74ce; /* Blue button */
+    background-color: #6388df;
     color: white;
     border-radius: 10px;
     transition: 0.3s;
@@ -49,16 +50,20 @@ h1 {
     text-align: center;
 }
 
+.clicker-title {
+    margin-top: 20px;
+}
+
 .score-display {
     font-size: 1.5rem;
     margin: 20px 0;
-    color: #333;
+    color: #333333;
 }
 
 #clicker-button {
     padding: 15px 30px;
     font-size: 1.5rem;
-    background-color: #eabcdc; /* Pink button */
+    background-color: #6388df;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -66,5 +71,12 @@ h1 {
 }
 
 #clicker-button:hover {
-    background-color: #d997b5;
+    background-color: #597ac7;
+}
+
+/* Upgrades and rewards */
+#upgrades {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #555;
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="clicker-title">Clicker Game</h1>
+        <p class="score-display">Clicks: <span id="score">0</span></p>
+        <button id="clicker-button">Click Me!</button>
+        <div class="sidebar">
+            <button id="home-button">Home</button>
+            <button id="cursor-options">Change Cursor</button>
+            <button id="reset-button">Reset Score</button>
+        </div>
+        <!-- Reset Confirmation Popup -->
+        <div id="reset-popup" class="popup reset-popup-hidden">
+            <p>Are you sure you want to reset?</p>
+            <button id="confirm-reset-button">Yes, Reset</button>
+            <button id="cancel-reset-button">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Award Popup -->
+    <div id="award-popup" class="hidden">
+        <p id="award-message"></p>
+    </div>
+
+    <!-- Flashing Motivational Message -->
+    <div id="motivational-message" class="motivational-message hidden">Keep Going!</div>
+
+    <script src="clicker.js"></script>
+</body>
+</html>

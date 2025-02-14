@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Dollars Calculators</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Dining Dollars Calculators</h1>
+        
+        <!-- Container for the three calculators -->
+        <div class="calculators-container">
+            <!-- Calculator 1: Price per Meal -->
+            <div class="calculator-box">
+                <label for="dining-dollars">Enter Dining Dollars:</label>
+                <input type="number" id="dining-dollars" placeholder="Dining Dollars">
+                <label for="meal-cost">Enter Meal Cost:</label>
+                <input type="number" id="meal-cost" placeholder="Meal Price">
+                <button onclick="calculateMeals()">Calculate</button>
+                <p id="meal-result"></p>
+            </div>
+
+            <!-- Calculator 2: Money per Day/Week -->
+            <div class="calculator-box">
+                <label for="total-dining-dollars">Total Dining Dollars:</label>
+                <input type="number" id="total-dining-dollars" placeholder="Total Dining Dollars">
+                <label for="time-period">Time Period (days or weeks):</label>
+                <select id="time-period">
+                    <option value="days">Days</option>
+                    <option value="weeks">Weeks</option>
+                </select>
+                <label for="days-left">Days Left in Quarter:</label>
+                <input type="number" id="days-left" placeholder="Days Left">
+                <button onclick="calculateMoneyPer()">Calculate</button>
+                <p id="money-result"></p>
+            </div>
+
+            <!-- Calculator 3: How Many Burgers Can You Get -->
+            <div class="calculator-box">
+                <label for="burger-dollars">Enter Dining Dollars to calculate how many burgers you can afford:</label>
+                <input type="number" id="burger-dollars" placeholder="Dining Dollars">
+                <button onclick="calculateBurgers()">Calculate</button>
+                <p id="burger-result"></p>
+            </div>
+        </div>
+
+        <button id="home-button" onclick="goHome()">Home</button>
+    </div>
+
+    <script>
+        // Price per Meal Calculator
+        function calculateMeals() {
+            let dollars = parseFloat(document.getElementById('dining-dollars').value);
+            let cost = parseFloat(document.getElementById('meal-cost').value);
+            
+            if (isNaN(dollars) || isNaN(cost) || cost <= 0) {
+                document.getElementById('meal-result').innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            let meals = Math.floor(dollars / cost);
+            document.getElementById('meal-result').innerText = `You can afford ${meals} meal(s).`;
+        }
+
+        // Money per Day/Week Calculator
+        function calculateMoneyPer() {
+            let totalDollars = parseFloat(document.getElementById('total-dining-dollars').value);
+            let daysLeft = parseFloat(document.getElementById('days-left').value);
+            let timePeriod = document.getElementById('time-period').value;
+
+            if (isNaN(totalDollars) || isNaN(daysLeft) || daysLeft <= 0) {
+                document.getElementById('money-result').innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            let moneyPer = totalDollars / daysLeft;
+
+            if (timePeriod === "weeks") {
+                moneyPer = moneyPer * 7;
+            }
+
+            document.getElementById('money-result').innerText = `You should spend ${moneyPer.toFixed(2)} per ${timePeriod}.`;
+        }
+
+        // How Many Burgers Can You Get
+        function calculateBurgers() {
+            let dollars = parseFloat(document.getElementById('burger-dollars').value);
+            const burgerPrice = 10; // Default burger price is $10
+            
+            if (isNaN(dollars) || dollars <= 0) {
+                document.getElementById('burger-result').innerText = "Please enter valid dining dollars.";
+                return;
+            }
+
+            let burgers = Math.floor(dollars / burgerPrice);
+            document.getElementById('burger-result').innerText = `You can afford ${burgers} burger(s).`;
+        }
+
+        // Home button redirect
+        function goHome() {
+            window.location.href = "index.html";
+        }
+
+    </script>
+</body>
+</html>

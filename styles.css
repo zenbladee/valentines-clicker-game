@@ -37,14 +37,28 @@ button, .game-option {
 }
 
 h1 {
-    font-size: 4rem;
+    text-align: center;  /* Horizontally center the text */
+    position: absolute;  /* Position it absolutely */
+    top: 0;  /* Align it to the top of the page */
+    left: 50%;  /* Center it horizontally */
+    transform: translateX(-50%);  /* Adjust to precisely center it */
+    width: 100%;  /* Ensure the element takes up full width */
+    padding: 10px 0;  /* Optional: Add some space above and below the title */
+    font-size: 6rem;
     color: #7c9ce3;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-shadow: 4px 4px 0px #3458a6, 6px 6px 0px #597ac7;
 }
 
 h2 {
-    font-size: 2rem;
+    text-align: center;  /* Horizontally center the text */
+    position: absolute;  /* Position it absolutely */
+    top: 125px;  /* Align it to the top of the page */
+    left: 50%;  /* Center it horizontally */
+    transform: translateX(-50%);  /* Adjust to precisely center it */
+    width: 100%;  /* Ensure the element takes up full width */
+    padding: 10px 0;  /* Optional: Add some space above and below the title */
+    font-size: 3rem;
     color: #7c9ce3;
     margin-bottom: 30px;
     text-shadow: 4px 4px 0px #3458a6, 6px 6px 0px #597ac7;
@@ -57,14 +71,24 @@ h2 {
     text-align: center;
 }
 
+/* Ensure game selection buttons are stacked vertically */
+.game-selection {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 15px; /* Adds space between buttons */
+    margin-top: 50px; /* Adjust spacing from the title */
+}
+
 /* Game Selection Buttons */
 .game-selection button {
+    width: 400px; /* Make buttons uniform in width */
     padding: 15px 30px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background-color: #6388df;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 200px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -75,6 +99,13 @@ h2 {
 
 /* Clicker Title */
 .clicker-title {
+    text-align: center;  /* Horizontally center the text */
+    position: absolute;  /* Position it absolutely */
+    top: 325px;  /* Align it to the top of the page */
+    left: 50%;  /* Center it horizontally */
+    transform: translateX(-50%);  /* Adjust to precisely center it */
+    width: 100%;  /* Ensure the element takes up full width */
+    padding: 10px 0;  /* Optional: Add some space above and below the title */
     font-size: 3rem;
     color: #7c9ce3;
     margin-bottom: 10px;
@@ -356,3 +387,173 @@ h2 {
     font-size: 18px;
     display: none;
   }
+
+
+  body {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #d8f8ff; /* Soft blue - Matches the original theme */
+    color: black; /* Ensuring contrast for readability */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+.best-time {
+    font-size: 1.5rem;
+}
+
+.timer {
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+button {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#ready-button {
+    background-color: #ffcc00;
+    color: black;
+}
+
+#ready-button:hover {
+    background-color: #ffaa00;
+}
+
+#reaction-button {
+    background-color: red;
+    color: white;
+    width: 250px; /* Bigger button */
+}
+
+#reaction-button.active {
+    background-color: green;
+}
+
+#reaction-button:hover {
+    opacity: 0.8;
+}
+
+#home-button {
+    background-color: #597ac7;
+    color: white;
+}
+
+#home-button:hover {
+    background-color: #47619e;
+}
+
+/* Overall container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffecb3; /* Light yellow */
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin: 0 auto;
+}
+
+.main-container h1 {
+    font-size: 5rem;
+    color: #ffc062;
+    text-shadow: 3px 3px 0px #cc7700;
+    margin-bottom: 20px;
+}
+
+/* Container for the three calculators (flexbox for side-by-side layout) */
+.calculators-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap; /* To make it responsive if the screen size is small */
+    margin-bottom: 30px;
+}
+
+/* Individual calculator boxes */
+.calculator-box {
+    background-color: white;
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    padding: 20px;
+    width: 30%; /* This ensures they stay side-by-side */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 300px; /* Prevents shrinking too much on smaller screens */
+    text-align: center; /* Center content inside the calculator box */
+}
+
+.calculator-box h2 {
+    font-size: 1.8rem;
+    color: #ff6600;
+    margin-bottom: 10px;
+    text-align: center; /* Ensure the title is centered */
+}
+
+/* Input fields and buttons */
+.calculator-box input, .calculator-box select {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.calculator-box button {
+    font-size: 1.5rem;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calculator-box button:hover {
+    background-color: #ffaa00;
+}
+
+/* Result text */
+#meal-result, #money-result, #food-result {
+    font-size: 1.5rem;
+    color: #ff6600;
+    margin-top: 10px;
+}
+
+/* Home button */
+#home-button {
+    font-size: 1.5rem;
+    background-color: #6388df;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}

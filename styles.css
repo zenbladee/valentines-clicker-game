@@ -1,7 +1,11 @@
+/* ============================================= */
 /* Import Bubble Letter Font */
+/* ============================================= */
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-/* Basic Reset */
+/* ============================================= */
+/* Global Styles */
+/* ============================================= */
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +29,9 @@ button, .game-option {
     font-family: 'Luckiest Guy', cursive;
 }
 
+/* ============================================= */
 /* Main Menu */
+/* ============================================= */
 .menu-container {
     text-align: center;
 }
@@ -44,15 +50,17 @@ h2 {
     text-shadow: 4px 4px 0px #3458a6, 6px 6px 0px #597ac7;
 }
 
-/* Clicker Game */
+/* ============================================= */
+/* Clicker Game Styles */
+/* ============================================= */
 .game-container {
     text-align: center;
 }
 
+/* Game Selection Buttons */
 .game-selection button {
     padding: 15px 30px;
     font-size: 1.5rem;
-    font-family: 'Luckiest Guy', cursive;
     background-color: #6388df;
     color: white;
     border: none;
@@ -64,6 +72,8 @@ h2 {
 .game-selection button:hover {
     background-color: #3458a6;
 }
+
+/* Clicker Title */
 .clicker-title {
     font-size: 3rem;
     color: #7c9ce3;
@@ -78,11 +88,12 @@ h2 {
     color: #7c9ce3;
 }
 
+/* ============================================= */
 /* Clicker Button */
+/* ============================================= */
 #clicker-button {
     padding: 10px 20px;
     font-size: 2rem;
-    font-family: 'Luckiest Guy', cursive;
     margin: 20px;
     background-color: #597ac7;
     color: white;
@@ -96,6 +107,9 @@ h2 {
     background-color: #49629c;
 }
 
+/* ============================================= */
+/* Sidebar Buttons */
+/* ============================================= */
 .sidebar {
     position: fixed;
     left: 10px;
@@ -115,32 +129,28 @@ h2 {
     border-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
-    font-family: 'Luckiest Guy', cursive;
 }
 
 .sidebar button:hover {
     background-color: #49629c;
 }
 
-/* Hide popup initially */
-.reset-popup-hidden {
-    display: none;
-}
-
+/* ============================================= */
 /* Reset Confirmation Popup */
+/* ============================================= */
 #reset-popup {
     position: fixed;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px; /* Adjust width as needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    display: none; /* Initially hidden */
-    z-index: 1000; /* Ensure it's above other elements */
+    display: none;
+    z-index: 1000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -150,7 +160,7 @@ h2 {
 }
 
 #reset-popup button {
-    background-color: #ff4040; /* Red button color */
+    background-color: #ff4040;
     color: white;
     border: none;
     padding: 10px;
@@ -158,25 +168,24 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     width: 80%;
-    font-family: 'Luckiest Guy', cursive;
     font-size: 1.2rem;
 }
 
 #reset-popup button:hover {
-    background-color: #d32f2f; /* Darker red on hover */
+    background-color: #d32f2f;
 }
 
 #confirm-reset-button {
     background-color: red;
-    color: white;
 }
 
 #cancel-reset-button {
     background-color: gray;
-    color: white;
 }
 
+/* ============================================= */
 /* Award Popups */
+/* ============================================= */
 #award-popup {
     position: fixed;
     top: 10%;
@@ -189,15 +198,12 @@ h2 {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: none;
     font-size: 1.5rem;
-    font-family: 'Luckiest Guy', cursive;
     text-align: center;
 }
 
-.motivational-message-hidden {
-    display: none;
-}
-
-/* Flashing Motivational Message */
+/* ============================================= */
+/* Motivational Messages */
+/* ============================================= */
 .motivational-message {
     font-size: 2rem;
     color: #f8e494;
@@ -219,12 +225,9 @@ h2 {
     100% { opacity: 0; }
 }
 
-/* Hidden Class */
-.award-popup-hidden {
-    display: none;
-}
-
-/* Cascading Hearts */
+/* ============================================= */
+/* Falling Hearts Animation */
+/* ============================================= */
 .heart-container {
     position: fixed;
     top: 0;
@@ -237,9 +240,9 @@ h2 {
 
 .heart {
     position: absolute;
-    font-size: 2rem; /* Bigger emoji */
+    font-size: 2rem;
     animation: fallDown linear forwards;
-    pointer-events: auto; /* Allows clicking */
+    pointer-events: auto;
     cursor: pointer;
     opacity: 1;
 }
@@ -254,3 +257,102 @@ h2 {
         opacity: 0;
     }
 }
+
+/* ============================================= */
+/* Utility Classes */
+/* ============================================= */
+.reset-popup-hidden, 
+.award-popup-hidden, 
+.motivational-message-hidden {
+    display: none;
+}
+
+/* Cursor Selection Popup */
+.cursor-popup-hidden {
+    display: none;
+}
+
+#cursor-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#cursor-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.cursor-option {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #6388df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cursor-option:hover {
+    background-color: #3458a6;
+}
+
+#close-cursor-popup {
+    background-color: #3458a6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for random objects */
+.random-object {
+    position: absolute;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    animation: moveAcrossScreen 5s linear infinite;
+  }
+  
+  /* Animation for objects to cross the screen */
+  @keyframes moveAcrossScreen {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: 100vw;
+    }
+  }
+
+  .random-object.heart { background-color: pink; }
+  .random-object.coin { background-color: gold; }
+  .random-object.star { background-color: yellow; }
+  .random-object.gift { background-color: green; }
+  
+  /* Hidden message style */
+  #random-prize-message {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: none;
+  }

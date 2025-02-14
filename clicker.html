@@ -13,7 +13,7 @@
         <button id="clicker-button">Click Me!</button>
         <div class="sidebar">
             <button id="home-button">Home</button>
-            <button id="cursor-options">Change Cursor</button>
+            <button id="cursor-button">Change Cursor</button>
             <button id="reset-button">Reset Score</button>
         </div>
         <!-- Reset Confirmation Popup -->
@@ -23,7 +23,13 @@
             <button id="cancel-reset-button">Cancel</button>
         </div>
     </div>
-
+    <!-- Cursor Selection Popup -->
+    <div id="cursor-popup" class="popup cursor-popup-hidden">
+        <h3>Select Your Cursor</h3>
+        <div id="cursor-options" class="cursor-options"></div>
+        <button id="close-cursor-popup">Close</button>
+    </div>
+    <div id="random-prize-message" class="hidden"></div>
     <!-- Award Popup -->
     <div id="award-popup" class="hidden">
         <p id="award-message"></p>

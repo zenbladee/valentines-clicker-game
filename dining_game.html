@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Dollars Survival Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dining-game-container">
+        <!-- Left side: Game area -->
+        <div class="dining-game-play">
+            <h1>Dining Dollars Survival Game</h1>
+            <canvas id="gameCanvas"></canvas>
+            <p id="dining-message"></p>
+            <div class="dining-game-controls">
+                <button onclick="startGame('easy')">Easy (60s)</button>
+                <button onclick="startGame('medium')">Medium (45s)</button>
+                <button onclick="startGame('hard')">Hard (30s)</button>
+            </div>
+            <button id="home-button" onclick="goHome()">Home</button>
+            <div id="message"></div>
+        </div>
+    
+        <!-- Right side: Sidebar with game info -->
+        <div class="dining-game-info">
+            <p><strong>Health:</strong> <span id="health">100</span></p>
+            <p><strong>Money:</strong> $<span id="money">50</span></p>
+            <p><strong>Time Left:</strong> <span id="time-left">60</span>s</p>
+        </div>
+    </div>
+
+    <script src="dining_game.js"></script>
+</body>
+</html>
